@@ -1,0 +1,47 @@
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Рандомайзер персонажей</title>
+        <link rel="stylesheet" href="styleMain.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap" rel="stylesheet">
+    </head>
+    <header>
+        <div class = "header_burger">
+            <span></span>
+        </div>
+        <nav class="header_nav">
+            <ul class = "header_list">
+                <li><a href = "" class = "header_list">Галерея персонажей</a></li>
+                <li><a href = "" class = "header_list">.....</a></li>
+                <li><a href = "" class = "header_list">.....</a></li>
+                <li><a href = "" class = "header_list">.....</a></li>
+                <li><a href = "" class = "header_list">.....</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <main>
+            <h1>Генератор идей для создания персонажей</h1>
+            <h2 class = "flowtext">Выбери своего героя!</h2>
+            <div class = "buttons">
+                <button class = "button_transition">Человекоподобные</button>
+                <button class = "button_transition">Пони</button>
+            </div>
+        </main>
+    </body>
+</html>
+<!-- Скрипт для открытия бургера -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var headerBurger = document.querySelector('.header_burger');
+    var headerNav = document.querySelector('.header_nav');
+    
+    headerBurger.addEventListener('click', function(event) {
+        headerBurger.classList.toggle('active');
+        headerNav.classList.toggle('active');
+    });
+});
+</script>

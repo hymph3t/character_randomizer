@@ -1,0 +1,130 @@
+*{
+
+    font-family: "Cormorant Infant", serif;
+}
+body{
+    background-color: #8DAEF2;
+}
+h1, h2{
+    text-align: center;
+    color:bisque;
+}
+h2{
+    font-size: 3em;
+    color: rgb(217,84,72);
+}
+h1{
+    font-size: 4em;
+    text-shadow: 3px 1px 3px rgb(217,84,72);
+}
+.flowtext{
+    background: linear-gradient(90deg,  #ffd333, #f2889a, #d95448, #ff3333, #fedd64);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textflow 7s linear infinite;
+}  
+@keyframes textflow {
+    from {background-position: 0% center}         
+    to {background-position: 200% center}
+  }
+.button_transition{
+    width: 35%;
+    height: 30%;
+    border-radius: 7px;
+    border: none;
+    display: inline-block;
+    font-size: 2em;
+    background: #465EA6;
+    color: bisque;
+    text-shadow: 3px 1px 3px rgb(217,84,72);
+    box-shadow: 10px 10px 10px #164093;
+    margin: 30px;
+}
+.button_transition:active {
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: none;
+}
+.buttons{
+    text-align: center;
+}
+.header_burger{
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+}
+.header_burger span{
+    background-color: rgb(18,60,105);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+}
+.header_burger::before, .header_burger::after{
+    content: '';
+    background-color: rgb(18,60,105);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+}
+.header_burger::before{
+    top: 0;
+}
+.header_burger::after{
+    bottom: 0;
+}
+.header_burger.active::before{
+    transform: rotate(45deg);
+    top: 9px;
+}
+.header_burger.active::after{
+    transform: rotate(-45deg);
+    bottom: 9px;
+}
+.header_burger.active span{
+    transform: scale(0);
+}
+.header_burger.active{
+    font-size: 22px !important;
+}
+.header_nav{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background-color: rgba(141,174,242, 0.8);
+    padding: 50px 10px 20px 10px;
+    transition: all 0.3s ease 0s;
+}
+.header_nav.active{
+    top: 0;
+    font-size: 22px !important;
+    text-align: center;
+}
+.header_list{
+    display: block;
+    padding: 0;
+}
+.header_list li{
+    margin-bottom: 50px;
+}
+.header_list li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(217,84,72);
+}
+a:visited{
+    color: bisque;
+}
