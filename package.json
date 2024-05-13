@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "gulp": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp-jsdoc3": "^3.0.0"
   }
 }
